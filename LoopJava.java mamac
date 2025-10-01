@@ -1,0 +1,147 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package loop.java;
+import java.util.Scanner;
+/**
+ *
+ * @author Student
+ */
+public class LoopJava {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
+      
+      while (true) {
+      System.out.println("Select Activity");
+      int Nvalue = input.nextInt();
+      int a = 0;
+      int sum = 0;
+     
+      
+     switch (Nvalue) {
+         case 1:
+               System.out.println("Activity 1");
+               System.out.print("Enter a number: ");
+        int number = input.nextInt();
+
+        // Generate multiplication table using a for loop
+        for (int b = 1; b <= 10; b= b+1) {
+            int result = number * b;
+            System.out.println(number + " x " + b + " = " + result);
+        }
+        break;
+    case 2: {
+        System.out.println("Activity 2");
+        System.out.print("Enter a Number: ");
+        a = input.nextInt();
+        sum = 0;  // reset sum
+
+        int i = 1; //loop starts at 1
+        while (i <= a) {  //keeps running until i is greater than the number entered 
+            //The loop repeats as long as i is less than or equal to a
+            sum = sum + i;  //adds each number to the total
+            System.out.println("i = " + i); //moves to the next number (prevents infinite loop)
+            i = i + 1;  
+        }   
+            // PAG HUMAN SA LOOP MA PRINT NA ANG SUM SA TANAN NUMBER
+        System.out.println("sum = " + sum);
+        break;
+     
+    }
+    case 3: 
+      System.out.println("Activity 3 Factorial calculator");  
+       System.out.print("Enter a number: ");
+        int N = input.nextInt();
+        double factorial = 1;  // use long for bigger results
+        double i = 1;
+       
+        if (N < 0){
+            System.out.println("This value is a negative number. Please input a non-negative number");
+        
+        // do-while loop to calculate factorial
+        } else if ( N == 0 ) {
+            System.out.println("The factorial of " + N + " is equal to 1.");
+        }
+        else {
+                do {
+                    i = (i * factorial);
+                    factorial++;
+                }
+                while (factorial <= N);
+                System.out.println("The Factorial of " + N + " is equal to: " + i );
+        }
+        break;
+     
+    
+        case 4:
+        
+          System.out.println("Even and Odd numbers identifier");
+          System.out.println("Enter a number: "); 
+        int y = input.nextInt(); 
+        
+        if (y < 0) {
+            
+        // Print even numbers
+        y = Math.abs(y);
+        System.out.print("Even numbers: ");
+        for (int v = 1; v <= y; v++) {
+            if (v % 2 == 0) {  // check if divisible by 2
+                 System.out.print("-" + v + " ");
+            }
+        }
+
+        System.out.println(); // new line
+        
+
+        // Print odd numbers
+        System.out.print("Odd numbers: ");
+        for (int x = 1; x <= y; x++) {
+            if (x % 2 != 0) {  // check if not divisible by 2
+                System.out.print("-" + x + " ");
+            } } 
+        System.out.println();
+        
+        } else {
+ // Print even numbers
+        
+        System.out.print("Even numbers ");
+        for (int v = 1; v <= y; v++) {
+            if (v % 2 == 0) {  // check if divisible by 2
+                System.out.print(v + " ");
+            }
+        }
+
+        System.out.println(); // new line
+
+        // Print odd numbers
+        System.out.print("Odd numbers ");
+        for (int x = 1; x <= y; x++) {
+            if (x % 2 != 0) {  // check if not divisible by 2
+                System.out.print(x + " ");
+            } } 
+        System.out.println(); }
+        break;
+    case 5:
+        System.out.print(" Revese Digits of a Number (while loop)");
+          System.out.print("Enter a number: ");
+        int number1 = input.nextInt();
+
+        int reversed = 0;
+
+        // While loop to reverse digits
+        while (number1 != 0) {
+            int digit = number1 % 10;       // get last digit
+            reversed = reversed * 10 + digit; // build reversed number
+            number1 = number1 / 10;          // remove last digit
+        }
+
+        // Print result
+        System.out.println("Reversed: " + reversed);
+    break;
+           }
+}}}
